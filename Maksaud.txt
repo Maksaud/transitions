@@ -1,0 +1,53 @@
+This is a html page with 4 images and a background. Using CSS I created a background by using an image from the internet. I targetted the body tab in my style tag and gave the background a no-repeat and fixed properties. This would make sure that my background image doesnt repeat itself again and again untill it fills the page. I also set it to fixed so it will always be present even if scrolled.
+
+
+		body{
+		    background:no-repeat ("Background.jpg") fixed;
+			}
+
+
+I created 6 images with img tags that have a classes image1, image2 and etc. they each have 1 of the 5 transformation 2d or 3d. These transformations are: translation, rotation, skew, matrix, scale. all image has the same heigt and width wich are 250 X 150 px. They all have a transition for the property transform for 2 seconds so that we can see the transformation happening. Their position is absolute so that the image can be placed anywhere on the page.
+
+
+		.image1, .image2, .image3, .image4, .image5, .image6{
+			position:absolute;
+			height:150px;
+			width:250px;
+			transition:transform 2s;
+			}
+
+The first image with the class of image1 is the flamingos image. I postioned it 12% from the left and 250px from the top. I selected image1 with a hover selector, declared the property to transform and created a value of rotation to 360 degres. This will make the image do a 360 degres spin.
+
+		.image1{
+			left:12%
+			top:250px;
+			}
+		
+		.image1:hover{
+			transform:rotate(360deg)
+			}
+
+The second image with the class of image 2 is the image with the blue flower. I positined it 75% from the left and 250px from the top. I selected image2 with a hover selectior and declared the property to transform and created a value of translation with the parameters of x as 50px, and y as 100px. This will move the image from the original point to the new postion which is 50px from original to the right and 100px from original down.
+
+
+	    .image2{
+        	left:75%;
+        	top:250px;
+    		   }
+
+	    .image2:hover{
+        	transform:translate(50px,100px);
+    			 }
+
+The third image with the class of image3 is the image with the statue. I postioned it 12% from the left and 500px fron the top. I selected image3 with a hover selector and declared the property to transform and created a value of scalation with the parameters width 2 and heigt 3. This will double the size of the width and tripple the size of the height.
+
+    .image3{
+        left:12%;
+        top:500px;
+    }
+
+    .image3:hover{
+        transform:scale(2,3);
+    }
+
+matrix(scaleX(),skewY(),skewX(),scaleY(),translateX(),translateY())
